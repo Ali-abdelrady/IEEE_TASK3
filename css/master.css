@@ -14,6 +14,7 @@
   body {
     margin: 0;
     font-family: "Cairo", sans-serif;
+    overflow-x:hidden;
   }
   a {
     text-decoration: none;
@@ -153,6 +154,32 @@ header > .header-container > .extra-nav{
   opacity: 1;
 }
 
+.side-bar
+{
+  display: block;
+  position: absolute;
+  right:0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  padding: 70px 40px;
+  background-color: #222;
+  z-index: 1;
+  transition: .3s;
+} 
+.side-bar >.logo  >img
+{
+  width: 100px;
+}
+.side-bar >.logo 
+{
+  /* width: 25%; */
+  text-align: center;
+}
+.hero-section > .container > .row > form > button:nth-child(1):hover .side-bar
+{
+  background-color: red;
+}
 
 /* End Header Section */
 
@@ -234,11 +261,21 @@ header > .header-container > .extra-nav{
   margin:50px 0;
   text-align: center;
 }
+.main-heading {
+  text-align: center;
+  margin: 50px 0  ;
+}
+
+.row >.main-heading > h1{
+    font-size: 2.625rem;
+    font-weight: 100;
+    text-align: center;
+}
 .about-section > .container > .row:nth-child(1) {
   display: block;
 }
 .about-section > .container > .row:nth-child(1) > h1 {
-  font-size: xx-large;
+  font-size: 2.625rem;
     font-weight: 100;
 }
 
@@ -248,10 +285,9 @@ header > .header-container > .extra-nav{
   transform: translateY(0px);
 }
 .about-section > .container > .row > .col > i:hover {
-  font-size: 45px;
   transform: translateY(-10px);
 }
-.about-section  p {
+p {
   line-height:1.5;
   color: #788487;
 }
@@ -272,6 +308,198 @@ header > .header-container > .extra-nav{
 
 /* End About Section */
 
+/* Start Module1 section */
+.module > .container > .row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.module > .container > .row > .col {
+  width: calc(80% / 3);
+  margin: 15px 0px;
+  padding: 0px;
+}
+.module > .container > .row > .col > .box > i
+{
+  font-size: 45px;
+  color:#505cfd;
+}
+/* End Module1 section */
+
+/* Start Module2 Section */
+.module2 
+{
+  margin: 20px 0;
+}
+.module2 > .container > .row{
+  display: flex;
+  
+}
+.module2 > .container > .row > .col{
+  width: 50%;
+  margin: 0 30px;
+
+}
+.module2 > .container > .row > .col > .box
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.module2 > .box > .icon
+{
+  width: 100%;
+  font-size: 15px;
+}
+.module2 > .box > .text
+{
+
+}
+/* End Module2 Section */
+
+/* Start Module3  Section */
+.module4 .row,
+.module5 .row > .col
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.module4 .row > .col >.text > h3
+{
+  font-size: 1rem;
+  transition: all .3s;
+}
+.module4 .row > .col >.text > h3:hover
+{
+  color: #505cfd;
+}
+.module4 .row > .col >.text > a{
+  color: #505cfd;
+}
+img
+{
+  max-width:100%;
+  vertical-align: middle;
+  border-style: none;
+}
+/* End Module3  Section */
+.module4 .row > .col > .image
+{
+  width:calc(100%3);
+}
+/* Start Module 5 Section */
+.module5 .row > .col > .image{
+  width: calc(90%/3);
+}
+.module5 .row > .col{
+  flex-wrap: wrap;
+}
+.module5 .text-center
+{
+  display: flex;
+  justify-content: center;
+}
+.module5 button{
+  text-transform: uppercase;
+  color:#505cfd;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 1px solid #505cfd;
+  background-color: transparent;
+  transition:.3s;
+  letter-spacing: .1125rem;
+    font-size: .75rem;
+}
+.module5 button:hover{
+  background-color: #505cfd;
+  color:white;
+}
+/* End Module 5 Section */
+/* Start Digital Design Design */
+.digital-section {
+  margin: 15px 0;
+}
+.digital-section .row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.digital-section .row > .box {
+  width: 32%;
+  position: relative;
+  overflow: hidden;
+  transition: .5s ;
+  
+} 
+.digital-section .row > .box >.caption 
+{
+  background: #fff;
+  position: absolute;
+  padding: 1.5625rem 1.25rem;
+  width: 100%;
+  bottom:-50%;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  transition: .5s;
+}
+.digital-section .image
+{
+  transition:.5s;
+}
+.box > .image
+{
+  top:0;
+}
+.digital-section .row > .box:hover .image
+{
+  transform: scale(1.2);
+}
+.digital-section .row > .box:hover .caption
+{
+  bottom:0;
+}
+/* ENd Digital Design Design */
+
+/* Start Module6 Section */
+.module6{
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  background-size: cover;
+  padding: 120px 0 100px;
+}
+.module6 .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.module6 .row > .col{
+  width:25%;
+  text-align: center;
+}
+.module6 .row > .col > .icon >i{
+  font-size: 2.125rem;
+  color: #505cfd;
+}
+.module6 .row > .col > .number > strong{
+  font-size: 3.125rem;;
+}
+.module6 .number
+{
+  margin: 15px 0;
+}
+
+/* End Module6  Section*/
+
+/* Start Module 6 Image section */
+
+/* End Module 6  Image section */
 /* Start Footer Section */
 footer
 {
@@ -312,11 +540,12 @@ footer > .container > .footer-widget > .col {
   color: #a3a6a8;
   line-height: 1.8;
 }
-.footer-widget .social-icons {
+.social-icons {
   display: flex;
   justify-content: space-between;
+  margin-top:20px ;
 }
-.footer-widget .porfolio-images
+.porfolio-images
 {
   display: flex;
   flex-wrap: wrap;
